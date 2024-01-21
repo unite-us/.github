@@ -1,0 +1,12 @@
+{
+    "name": "Hello World",
+    "description": "Simple workflow for learning GitHub Actions",
+    "iconName": "feed-issue-closed",
+    "categories": [],
+    "filePatterns": [
+        "package.json$",
+        "^Dockerfile",
+        ".*\\.md$"
+    ],
+    "labels": ["preview"]
+}
