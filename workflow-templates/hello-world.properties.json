@@ -2,7 +2,9 @@
     "name": "Hello World",
     "description": "Simple workflow for learning GitHub Actions",
     "iconName": "feed-issue-closed",
-    "categories": [],
+    "categories": [
+        "Deployment"
+    ],
     "filePatterns": [
         "package.json$",
         "^Dockerfile",
