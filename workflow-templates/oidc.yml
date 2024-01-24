@@ -1,0 +1,26 @@
+# This is standard OIDC AWS Authentication Setup
+name: "OIDC"
+on:
+  workflow_dispatch:
+      
+# Permission can be added at job level or workflow level
+# Required for AWS OIDC Configuration
+permissions:
+      id-token: write   # This is required for requesting the JWT
+      contents: read    # This is required for actions/checkout
+
+jobs:
+  run_dev:
+    runs-on: self-hosted
+    environment: development
+    steps:
+      - name: "Checkout"
+        uses: actions/checkout@v3
+
+      - name: "Configure AWS Credentials"
+        uses: aws-actions/configure-aws-credentials@v3
+        with:
+          # enter your full arn for your deployment role here
+          role-to-assume: INPUT_DEPLOYMENT_ROLE_ARN
+          # enter your aws region here
+          aws-region: INPUT_DEPLOYMENT_AWS_REGION

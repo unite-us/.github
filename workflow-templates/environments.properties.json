@@ -1,0 +1,13 @@
+{
+    "name": "Environments",
+    "description": "Hello World for testing running across different environments. Environments must be created or already exist in the repository configuration.",
+    "iconName": "octicon feed-issue-closed",
+    "categories": [
+        "Deployment"
+    ],
+    "filePatterns": [
+        "package.json$",
+        "^Dockerfile",
+        ".*\\.md$"
+    ]
+}

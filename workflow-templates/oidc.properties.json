@@ -1,0 +1,13 @@
+{
+    "name": "OIDC",
+    "description": "Confirm your repository OIDC credentials are correctly set up.",
+    "iconName": "octicon feed-issue-closed",
+    "categories": [
+        "Deployment"
+    ],
+    "filePatterns": [
+        "package.json$",
+        "^Dockerfile",
+        ".*\\.md$"
+    ]
+}

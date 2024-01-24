@@ -1,4 +1,4 @@
-name: Hello World
+name: Hello World - Self Hosted
 
 on:
   push:
@@ -8,10 +8,10 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
       - uses: actions/checkout@v4
 
       - name: Run a one-line script
-        run: echo Hello from Unite Us
+        run: echo Hello from Unite Us self-hosted Runner

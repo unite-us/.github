@@ -1,0 +1,23 @@
+name: Hello World
+
+on:
+  workflow_dispatch:
+
+jobs:
+  development_env:
+    runs-on: ubuntu-latest
+    environment: development
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run a one-line script
+        run: echo Hello from Unite Us
+
+  production_env:
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run a one-line script
+        run: echo Hello from Unite Us

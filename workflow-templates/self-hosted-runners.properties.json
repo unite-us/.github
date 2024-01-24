@@ -1,0 +1,13 @@
+{
+    "name": "Hello World - Self Hosted",
+    "description": "Print Hello World but run on a self-hosted runner",
+    "iconName": "octicon feed-issue-closed",
+    "categories": [
+        "Deployment"
+    ],
+    "filePatterns": [
+        "package.json$",
+        "^Dockerfile",
+        ".*\\.md$"
+    ]
+}
