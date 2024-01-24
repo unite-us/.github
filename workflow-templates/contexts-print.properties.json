@@ -1,0 +1,13 @@
+{
+    "name": "Contexts Print",
+    "description": "Utility workflow to print out all available contexts for a repository. Useful for finding context variables.",
+    "iconName": "feed-issue-closed",
+    "categories": [
+        "Deployment"
+    ],
+    "filePatterns": [
+        "package.json$",
+        "^Dockerfile",
+        ".*\\.md$"
+    ]
+}
