@@ -1,0 +1,13 @@
+{
+    "name": "Composite Action",
+    "description": "Example of how to leverage a Composite Workflow to encapsulate actions.",
+    "iconName": "octicon feed-issue-closed",
+    "categories": [
+        "Deployment"
+    ],
+    "filePatterns": [
+        "package.json$",
+        "^Dockerfile",
+        ".*\\.md$"
+    ]
+}

@@ -1,0 +1,12 @@
+name: "Composite Action"
+on:
+  workflow_dispatch:
+
+jobs:
+  print_contexts_to_log:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run Context Print via Composite Action
+        # note that running on @main is not advised but we do it here in this demo
+        # instead, target a tag or a SHA
+        uses: unite-us/actions-common/context-print@main
