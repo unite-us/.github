@@ -6,6 +6,7 @@ on:
 jobs:
   development_env:
     runs-on: ubuntu-latest
+    # Update this environment to match one you have configured for your repository
     environment: development
     steps:
       - uses: actions/checkout@v4
@@ -13,11 +14,32 @@ jobs:
       - name: Run a one-line script
         run: echo Hello from Unite Us
 
+      - name: Print Environment Variables Context
+        env:
+          VARS_CONTEXT: ${{ toJson(vars) }}
+        run: echo "$VARS_CONTEXT"
+
+      - name: Print Environment Secrets Context
+        env:
+          SECRETS_CONTEXT: ${{ toJson(secrets) }}
+        run: echo "$SECRETS_CONTEXT"      
+
   production_env:
     runs-on: ubuntu-latest
+    # Update this environment to match one you have configured for your repository
     environment: production
     steps:
       - uses: actions/checkout@v4
 
       - name: Run a one-line script
         run: echo Hello from Unite Us
+
+      - name: Print Environment Variables Context
+        env:
+          VARS_CONTEXT: ${{ toJson(vars) }}
+        run: echo "$VARS_CONTEXT"
+
+      - name: Print Environment Secrets Context
+        env:
+          SECRETS_CONTEXT: ${{ toJson(secrets) }}
+        run: echo "$SECRETS_CONTEXT"
